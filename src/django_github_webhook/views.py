@@ -64,7 +64,7 @@ class WebHookView(View):
             msg=request.body,
             digestmod=hashlib.sha1
         )
-        if not hmac.compare_digest(mac.hexdigest(), signature):
+        if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
             return HttpResponseBadRequest('Invalid X-HUB-SIGNATURE header found')
         event = request.META['HTTP_X_GITHUB_EVENT']
         if event not in self.get_allowed_events():

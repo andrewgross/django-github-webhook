@@ -22,17 +22,17 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='django-github-webhook',
+    name='django-github-webhook27',
     version='0.1.1',
     license='BSD',
-    description='Django view for GitHub webhook recievers',
+    description='Django view for GitHub webhook recievers, forked to work on 2.7',
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
     ),
-    author='Michael Fladischer',
-    author_email='michael@openservices.at',
-    url='https://github.com/fladi/django-github-webhook',
+    author='Andrew Gross',
+    author_email='andrewwgross@gmail.com',
+    url='https://github.com/andrewgross/django-github-webhook',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
