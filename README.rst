@@ -54,6 +54,8 @@ Overview
 
 .. end-badges
 
+NOTE: This is a fork modified to work on python 2.7
+
 A class based view for Django that can act as an receiver for GitHub webhooks. It is designed to validate all requests through their ``X-Hub-Signature``
 headers.
 
