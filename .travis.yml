@@ -1,5 +1,5 @@
 language: python
-python: '3.5'
+python: '2.7'
 sudo: false
 env:
   global:
@@ -9,9 +9,8 @@ env:
     - TOXENV=check
     - TOXENV=docs
 
-    - TOXENV=py34,codecov
-    - TOXENV=py35,codecov
-    - TOXENV=pypy,codecov
+    - TOXENV=py27,codecov
+
 before_install:
   - python --version
   - uname -a
